@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+    <link rel="stylesheet" href="Modul6.CSS">
+</head>
+<body>
+
+<div class="container">
+    <h1>Pendaftaran Mahasiswa Baru</h1>
+    <p>Silakan lengkapi data pendaftaran dengan benar.</p>
+
+    <form id="formDaftar">
+
+        <h2>Data Calon Mahasiswa</h2>
+
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" required minlength="3">
+        <span class="error" id="errorNama"></span>
+
+        <label>Tempat Lahir</label>
+        <input type="text" id="tempatLahir" required>
+        <span class="error" id="errorTempat"></span>
+
+        <label>Tanggal Lahir</label>
+        <input type="date" id="tanggalLahir" required>
+        <span class="error" id="errorTanggal"></span>
+
+        <label>Jenis Kelamin</label>
+        <select id="jk" required>
+            <option value="">-- Pilih Jenis Kelamin --</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+        <span class="error" id="errorJk"></span>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+        <span class="error" id="errorEmail"></span>
+
+        <label>Nomor Telepon</label>
+        <input type="tel" id="telepon" required
+               pattern="[0-9]{10,13}"
+               title="Nomor telepon harus 10-13 angka">
+        <span class="error" id="errorTelepon"></span>
+
+        <label>Alamat</label>
+        <textarea id="alamat" required minlength="10"></textarea>
+        <span class="error" id="errorAlamat"></span>
+
+
+        <h2>Data Pendidikan</h2>
+
+        <label>Asal Sekolah</label>
+        <input type="text" id="sekolah" required>
+        <span class="error" id="errorSekolah"></span>
+
+        <label>Tahun Lulus</label>
+        <input type="number" id="tahun" required min="2000" max="2030">
+        <span class="error" id="errorTahun"></span>
+
+        <label>Pilihan Program Studi</label>
+        <select id="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="Informatika">Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Teknik Mesin">Teknik Mesin</option>
+            <option value="Manajemen">Manajemen</option>
+        </select>
+        <span class="error" id="errorProdi"></span>
+
+
+        <h2>Data Orang Tua</h2>
+
+        <label>Nama Ayah</label>
+        <input type="text" id="ayah" required>
+        <span class="error" id="errorAyah"></span>
+
+        <label>Nama Ibu</label>
+        <input type="text" id="ibu" required>
+        <span class="error" id="errorIbu"></span>
+
+        <label>Nomor Telepon Orang Tua</label>
+        <input type="tel" id="teleponOrtu" required
+               pattern="[0-9]{10,13}"
+               title="Nomor telepon harus 10-13 angka">
+        <span class="error" id="errorTeleponOrtu"></span>
+
+        <button type="submit">Kirim Pendaftaran</button>
+
+        <p id="sukses"></p>
+
+    </form>
+</div>
+
+<script src="Modul6.js"></script>
+</body>
+</html>
